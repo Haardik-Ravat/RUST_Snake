@@ -4,14 +4,8 @@ use piston_window::types::Color;
 
 use crate::draw::draw_block;
 
-
-const SNAKE_COLOR: Color = [0.00, 0.00, 0.80, 1.0];
-
-
+const SNAKE_COLOR: Color = [0.00, 0.80, 0.00, 1.0];
 #[derive(Copy, Clone, PartialEq)]
-
-
-
 pub enum Direction {
     Up,
     Down,
@@ -29,11 +23,7 @@ impl Direction {
         }
     }
 }
-
-
 #[derive(Debug, Clone)]
-
-
 struct Block {
     x: i32,
     y: i32,
@@ -49,7 +39,7 @@ impl Snake {
     pub fn new(x: i32, y: i32) -> Snake {
         let mut body: LinkedList<Block> = LinkedList::new();
         body.push_back(Block {
-            x: x + 1,
+            x: x + 2,
             y,
         });
         body.push_back(Block {
