@@ -13,17 +13,18 @@ pub enum Direction {
     Right,
 }
 
-impl Direction {
-    pub fn opposite(&self) -> Direction {
-        match *self {
-            Direction::Up => Direction::Down,
-            Direction::Down => Direction::Up,
-            Direction::Left => Direction::Right,
-            Direction::Right => Direction::Left,
-        }
-    }
-}
+// impl Direction {
+//     pub fn opposite(&self) -> Direction {
+//         match *self {
+//             Direction::Up => Direction::Down,
+//             Direction::Down => Direction::Up,
+//             Direction::Left => Direction::Right,
+//             Direction::Right => Direction::Left,
+//         }
+//     }
+// }
 #[derive(Debug, Clone)]
+
 struct Block {
     x: i32,
     y: i32,
@@ -52,6 +53,10 @@ impl Snake {
         });
 
         Snake {
+            Direction::Up => Direction::Down,
+            Direction::Down => Direction::Up,
+            Direction::Left => Direction::Right,
+            Direction::Right => Direction::Left
             direction: Direction::Right,
             body,
             tail: None,
