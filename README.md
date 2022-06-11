@@ -1,1 +1,1 @@
-# RUST_Snakega
+# A snake game build using rust
